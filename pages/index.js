@@ -25,8 +25,8 @@ export default function Home() {
             <img
               className="mb-4 rounded  hover:shadow-2xl 
               hover:transition-all
-               cursor-pointer
-               hover:brightness-50
+              cursor-pointer
+              hover:brightness-50
               transition-all"
               src={`https://source.unsplash.com/random/` + post}
             />

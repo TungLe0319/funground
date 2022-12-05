@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function Modal(){
+export default function Modal({open, onClose}){
+  if (!open) {
+    return null
+  }
   return(
 <div className="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
   id="exampleModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -34,7 +37,7 @@ export default function Modal(){
           active:bg-purple-800 active:shadow-lg
           transition
           duration-150
-          ease-in-out" data-bs-dismiss="modal">Close</button>
+          ease-in-out" data-bs-dismiss="modal" onClick={onClose}>Close</button>
         <button type="button" className="px-6
       py-2.5
       bg-blue-600
